@@ -1,48 +1,32 @@
-# KS Aggregation Function
+# KS (Kreisselmeier-Steinhauser) Function
 
-This repository contains an implementation of the **KS aggregation function**, which is used to approximate the maximum of a set of functions in a smooth manner. The KS function is particularly useful in optimization and numerical methods where differentiability is required.
+The KS function is a popular approach in multi-objective optimization and constraint aggregation. It is often used to transform a set of constraints or multiple objectives into a single smooth function, making optimization problems more tractable, especially in structural and aerospace engineering.
 
-## **KS Function Definition**
-The KS function for a set of functions \( f_1, f_2, ..., f_n \) and a parameter \( p \) is defined as:
+## 1. Purpose of the KS Function
+The KS function is typically used for:
+- **Constraint aggregation**: Replacing multiple constraints with a single smooth approximation.
+- **Multi-objective optimization**: Combining multiple objectives into a single function.
+
+This helps simplify complex optimization problems while maintaining a good approximation of the original objectives or constraints.
+
+## 2. Mathematical Formulation
+The KS function is defined as:
 
 \[
-KS(x) = \frac{1}{p} \log \sum_{i=1}^{n} \exp(p \cdot f_i(x))
+KS(x) = \frac{1}{\rho} \ln \left( \sum_{i=1}^{m} \exp(\rho f_i(x)) \right)
 \]
 
 where:
-- \( f_i(x) \) are the input functions.
-- \( p \) is a parameter that controls the approximation smoothness (higher \( p \) makes it closer to the true maximum).
+- \( x \) is the decision variable.
+- \( f_i(x) \) are the individual constraint functions or objectives.
+- \( \rho > 0 \) is a tuning parameter controlling the approximation tightness.
 
-## **Example Implementation**
-In this implementation, we use the KS function on a set of **convex functions**, including:
+## 3. How It Works
+- When \( \rho \) is **small**, the KS function behaves like an average of the \( f_i(x) \) values.
+- When \( \rho \) is **large**, the KS function approximates the maximum of the \( f_i(x) \), meaning:
 
-- **Quadratic function**: \( f_1(x) = x^2 \)
-- **Exponential function**: \( f_2(x) = e^x \)
-- **Absolute value**: \( f_3(x) = |x| \)
-- **Log-squared function**: \( f_4(x) = \log(1 + x^2) \)
+\[
+\lim_{\rho \to \infty} KS(x) = \max_i f_i(x)
+\]
 
-We compute and plot:
-
-1. The **KS aggregation** of these functions.
-2. The **maximum function** (pointwise maximum of all input functions) for comparison.
-
-## **Usage**
-The Python script computes and visualizes the KS function using **Matplotlib**. To run it:
-
-```bash
-python ks_script.py
-```
-
-The plot will show:
-- **KS Aggregation** (smooth approximation of max function)
-- **Max Function** (exact pointwise maximum)
-- **Individual convex functions** (for reference)
-
-## **Interpretation**
-- As **p increases**, the KS function gets closer to the actual maximum.
-- The KS function ensures **differentiability**, making it useful in **gradient-based optimization**.
-- This method is widely used in **optimization, machine learning, and control theory** to approximate non-smooth functions smoothly.
-
----
-
-This implementation is useful for testing KS aggregation behavior in various numerical settings. Feel free to modify the function list and experiment with different values of \( p \)! 🚀
+This property allows the KS function to approximate the worst constraint violation while maintaining smooth differentiability, making it suitable for gradient-based optimization.
