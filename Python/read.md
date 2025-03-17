@@ -23,7 +23,7 @@ where:
 ## 3. How It Works
 - When p is **small**, the KS function behaves like an average of the  $f_i(x)$ values.
 - When p is **large**, the KS function approximates the maximum of the  $f_i(x)$, meaning:
-- 
+  
 $
 \lim_{ p \to \infty} KS(x) = \max_i f_i(x)
 $
