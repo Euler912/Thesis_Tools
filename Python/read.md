@@ -21,8 +21,8 @@ where:
 - \( $ \rho $ > 0 \) is a tuning parameter controlling the approximation tightness.
 
 ## 3. How It Works
-- When \(  $\rho $\) is **small**, the KS function behaves like an average of the \( f_i(x) \) values.
-- When \(  $\rho $ \) is **large**, the KS function approximates the maximum of the \( f_i(x) \), meaning:
+- When \(  $\rho $) is **small**, the KS function behaves like an average of the \( f_i(x) \) values.
+- When \(  $\rho $ ) is **large**, the KS function approximates the maximum of the \( f_i(x) \), meaning:
 
 \[
 \lim_{ $\rho $ \to \infty} KS(x) = \max_i f_i(x)
