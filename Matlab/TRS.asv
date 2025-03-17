@@ -1,9 +1,7 @@
-    % Combine constraints into cell arrays
-    A1 = data_pts.A1;
-    b1 = data_pts.b1;
-    A2 = data_pts.A2;
-    b2 = data_pts.b2;
-    A   =data_pts.A;
+    A1 = enbaht.A1();
+    b1 = enbaht.b1();
+    A2 = enbaht.A2();
+    b2 = enbaht.b2();
     n=20;
     A_list = {A1, A2};
     b_list = {b1, b2};
