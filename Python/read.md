@@ -17,9 +17,9 @@ KS(x) = \frac{1}{\rho} \ln \left( \sum_{i=1}^{m} \exp(\rho f_i(x)) \right)
 $$
 
 where:
-- \( f_i(x) \) are the individual constraint functions or objectives.
+- \( $f_i(x)$ \) are the individual constraint functions or objectives.
 - \( \rho > 0 \) is a tuning parameter controlling the approximation tightness.
-
+-$\( f_i(x) \)$
 ## 3. How It Works
 - When \( \rho \) is **small**, the KS function behaves like an average of the \( f_i(x) \) values.
 - When \( \rho \) is **large**, the KS function approximates the maximum of the \( f_i(x) \), meaning:
