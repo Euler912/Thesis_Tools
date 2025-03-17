@@ -4,11 +4,11 @@
 This repository provides an implementation of the **Moreau-Yosida regularization**, a fundamental concept in convex optimization used to smooth non-smooth functions. The Moreau envelope serves as a smooth approximation to a given function, and the proximal operator plays a crucial role in its definition. This approach is widely used in optimization, particularly in proximal algorithms and variational analysis.
 
 ## Concept of Moreau-Yosida Regularization
-The **Moreau-Yosida envelope** of a function $f(x) $ is given by:
-$$
+The **Moreau-Yosida envelope** of a function \( f(x) \) is given by:
+\[
 f_{\mu}(x) = \min_y \left( f(y) + \frac{1}{2\mu} \|x - y\|^2 \right)
-$$
-where $ \mu > 0 $ is a smoothing parameter.
+\]
+where \( \mu > 0 \) is a smoothing parameter.
 
 - This transformation results in a **smooth** function even when \( f(x) \) is non-smooth.
 - The **proximal mapping** associated with \( f(x) \) is:
