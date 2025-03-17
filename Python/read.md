@@ -24,8 +24,8 @@ where:
 - When p is **small**, the KS function behaves like an average of the  $f_i(x)$ values.
 - When p is **large**, the KS function approximates the maximum of the  $f_i(x)$, meaning:
 - 
-$$
+$
 \lim_{ p \to \infty} KS(x) = \max_i f_i(x)
-$$
+$
 
 This property allows the KS function to approximate the worst constraint violation while maintaining smooth differentiability, making it suitable for gradient-based optimization.
