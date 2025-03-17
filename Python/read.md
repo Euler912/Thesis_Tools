@@ -5,9 +5,9 @@ This repository contains an implementation of the **KS aggregation function**, w
 ## **KS Function Definition**
 The KS function for a set of functions \( f_1, f_2, ..., f_n \) and a parameter \( p \) is defined as:
 
-```math
+\[
 KS(x) = \frac{1}{p} \log \sum_{i=1}^{n} \exp(p \cdot f_i(x))
-```
+\]
 
 where:
 - \( f_i(x) \) are the input functions.
@@ -15,17 +15,20 @@ where:
 
 ## **Example Implementation**
 In this implementation, we use the KS function on a set of **convex functions**, including:
-- Quadratic function: \( f_1(x) = x^2 \)
-- Exponential function: \( f_2(x) = e^x \)
-- Absolute value: \( f_3(x) = |x| \)
-- Log-squared function: \( f_4(x) = \log(1 + x^2) \)
+
+- **Quadratic function**: \( f_1(x) = x^2 \)
+- **Exponential function**: \( f_2(x) = e^x \)
+- **Absolute value**: \( f_3(x) = |x| \)
+- **Log-squared function**: \( f_4(x) = \log(1 + x^2) \)
 
 We compute and plot:
+
 1. The **KS aggregation** of these functions.
 2. The **maximum function** (pointwise maximum of all input functions) for comparison.
 
 ## **Usage**
 The Python script computes and visualizes the KS function using **Matplotlib**. To run it:
+
 ```bash
 python ks_script.py
 ```
