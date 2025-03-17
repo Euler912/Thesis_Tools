@@ -18,7 +18,7 @@ $$
 
 where:
 -  $f_i(x)$  are the individual constraint functions or objectives.
-- $ \rho > 0 $ is a tuning parameter controlling the approximation tightness.
+- $ \rho $ > 0  is a tuning parameter controlling the approximation tightness.
 
 ## 3. How It Works
 - When \( \rho \) is **small**, the KS function behaves like an average of the \( f_i(x) \) values.
