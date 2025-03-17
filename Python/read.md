@@ -12,9 +12,9 @@ This helps simplify complex optimization problems while maintaining a good appro
 ## 2. Mathematical Formulation
 The KS function is defined as:
 
-\[
+$$
 KS(x) = \frac{1}{\rho} \ln \left( \sum_{i=1}^{m} \exp(\rho f_i(x)) \right)
-\]
+$$
 
 where:
 - \( x \) is the decision variable.
